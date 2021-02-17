@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/textEntryFragment">
+
+    <fragment
+        android:id="@+id/halfTextDisplayFragment"
+        android:name="com.example.navigationprimercd.view.HalfTextDisplayFragment"
+        android:label="fragment_half_text_display"
+        tools:layout="@layout/fragment_half_text_display" >
+        <argument
+            android:name="splitString"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/splitTextDecisionFragment"
+        android:name="com.example.navigationprimercd.view.SplitTextDecisionFragment"
+        android:label="fragment_split_text_decision"
+        tools:layout="@layout/fragment_split_text_decision" >
+        <action
+            android:id="@+id/action_splitTextDecisionFragment_to_halfTextDisplayFragment"
+            app:destination="@id/halfTextDisplayFragment" />
+        <argument
+            android:name="textToSplit"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/textEntryFragment"
+        android:name="com.example.navigationprimercd.view.TextEntryFragment"
+        android:label="fragment_text_entry"
+        tools:layout="@layout/fragment_text_entry" >
+        <action
+            android:id="@+id/action_textEntryFragment_to_splitTextDecisionFragment"
+            app:destination="@id/splitTextDecisionFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.navigationprimercd.view.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

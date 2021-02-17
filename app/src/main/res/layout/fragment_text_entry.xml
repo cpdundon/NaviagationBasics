@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.TextEntryFragment">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_to_split"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Text To Split"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_to_split"
+        android:text="Next"
+        android:textAppearance="?textAppearanceHeadline5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
